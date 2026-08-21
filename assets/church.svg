@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="watercolor" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="4" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#b6d5e8" stop-opacity="0.75"/>
+      <stop offset="50%" stop-color="#d4e8f3" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="roofGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c85a42"/>
+      <stop offset="100%" stop-color="#9e3b26"/>
+    </linearGradient>
+    <linearGradient id="wallGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff8e7"/>
+      <stop offset="100%" stop-color="#e8dcbf"/>
+    </linearGradient>
+    <radialGradient id="cloudWash" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#a8cde4" stop-opacity="0.6"/>
+      <stop offset="60%" stop-color="#cde2ef" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Watercolor Sky Background Wash -->
+  <rect width="800" height="600" fill="#fdfbf7"/>
+  <ellipse cx="400" cy="260" rx="360" ry="220" fill="url(#cloudWash)" filter="url(#watercolor)"/>
+  <path d="M 80,320 Q 200,120 400,140 Q 600,120 720,320 Q 600,440 400,430 Q 180,440 80,320 Z" fill="url(#skyGrad)" filter="url(#watercolor)"/>
+
+  <!-- Background Trees and Foliage -->
+  <g filter="url(#watercolor)" opacity="0.85">
+    <ellipse cx="160" cy="400" rx="90" ry="70" fill="#7a9a6b"/>
+    <ellipse cx="230" cy="410" rx="80" ry="60" fill="#5c7e4d"/>
+    <ellipse cx="570" cy="410" rx="80" ry="60" fill="#5c7e4d"/>
+    <ellipse cx="640" cy="400" rx="90" ry="70" fill="#7a9a6b"/>
+    <ellipse cx="120" cy="420" rx="60" ry="45" fill="#4d693f"/>
+    <ellipse cx="680" cy="420" rx="60" ry="45" fill="#4d693f"/>
+  </g>
+
+  <!-- Church Structure -->
+  <g id="church-building" filter="url(#watercolor)">
+    <!-- Base / Plinth & Steps -->
+    <polygon points="200,510 600,510 580,480 220,480" fill="#9e9182"/>
+    <polygon points="220,480 580,480 560,455 240,455" fill="#b8ab9a"/>
+    <polygon points="240,455 560,455 545,435 255,435" fill="#cfc3b2"/>
+
+    <!-- Left & Right Wing Buildings -->
+    <rect x="250" y="320" width="100" height="115" fill="url(#wallGrad)" stroke="#c2b293" stroke-width="1.5"/>
+    <rect x="450" y="320" width="100" height="115" fill="url(#wallGrad)" stroke="#c2b293" stroke-width="1.5"/>
+
+    <!-- Wing Roofs -->
+    <polygon points="235,320 365,320 300,260" fill="url(#roofGrad)"/>
+    <polygon points="435,320 565,320 500,260" fill="url(#roofGrad)"/>
+
+    <!-- Wing Crosses -->
+    <path d="M300,242 v18 M293,248 h14" stroke="#c5a557" stroke-width="3" stroke-linecap="round"/>
+    <path d="M500,242 v18 M493,248 h14" stroke="#c5a557" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Wing Windows (Arched) -->
+    <path d="M 280,380 v -30 a 20,20 0 0 1 40,0 v 30 z" fill="#2d4257" stroke="#e8dcbf" stroke-width="2"/>
+    <path d="M 480,380 v -30 a 20,20 0 0 1 40,0 v 30 z" fill="#2d4257" stroke="#e8dcbf" stroke-width="2"/>
+
+    <!-- Center Main Body -->
+    <rect x="330" y="270" width="140" height="165" fill="url(#wallGrad)" stroke="#b59a68" stroke-width="2"/>
+    <!-- Center Lower Portico Roof -->
+    <polygon points="315,270 485,270 400,225" fill="url(#roofGrad)"/>
+
+    <!-- Center Belfry / Tower (Second Tier) -->
+    <rect x="355" y="160" width="90" height="75" fill="url(#wallGrad)" stroke="#c2b293" stroke-width="1.5"/>
+    <polygon points="340,160 460,160 400,110" fill="url(#roofGrad)"/>
+
+    <!-- Center Top Steeple / Cupola -->
+    <rect x="375" y="90" width="50" height="25" fill="url(#wallGrad)"/>
+    <polygon points="365,90 435,90 400,35" fill="url(#roofGrad)"/>
+
+    <!-- Golden Cross on Main Spire -->
+    <path d="M400,12 v24 M390,20 h20" stroke="#d4af37" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="400" cy="20" r="3" fill="#ffd700"/>
+
+    <!-- Belfry Arches & Bell -->
+    <path d="M 380,210 v -25 a 20,20 0 0 1 40,0 v 25 z" fill="#1b2a38"/>
+    <ellipse cx="400" cy="195" rx="7" ry="9" fill="#c5a557"/>
+
+    <!-- Middle Rose / Arch Window -->
+    <circle cx="400" cy="255" r="16" fill="#30475e" stroke="#c5a557" stroke-width="2"/>
+    <path d="M 400,239 v 32 M 384,255 h 32" stroke="#c5a557" stroke-width="1.5"/>
+
+    <!-- Main Entrance Door (Double Arched) -->
+    <path d="M 370,435 v -55 a 30,30 0 0 1 60,0 v 55 z" fill="#5c3826" stroke="#9e7c53" stroke-width="3"/>
+    <path d="M 400,380 v 55" stroke="#9e7c53" stroke-width="2"/>
+
+    <!-- Architectural Mouldings & Columns -->
+    <line x1="330" y1="350" x2="470" y2="350" stroke="#c5a557" stroke-width="3"/>
+    <line x1="250" y1="370" x2="350" y2="370" stroke="#c5a557" stroke-width="2"/>
+    <line x1="450" y1="370" x2="550" y2="370" stroke="#c5a557" stroke-width="2"/>
+  </g>
+
+  <!-- Foreground Greenery Grass & Flower Accents -->
+  <g filter="url(#watercolor)">
+    <ellipse cx="400" cy="520" rx="300" ry="30" fill="#6d8b5b" opacity="0.6"/>
+    <ellipse cx="300" cy="510" rx="70" ry="18" fill="#4d693f" opacity="0.7"/>
+    <ellipse cx="500" cy="510" rx="70" ry="18" fill="#4d693f" opacity="0.7"/>
+    <circle cx="260" cy="505" r="5" fill="#d9534f" opacity="0.8"/>
+    <circle cx="280" cy="515" r="4" fill="#f0ad4e" opacity="0.8"/>
+    <circle cx="520" cy="515" r="4" fill="#f0ad4e" opacity="0.8"/>
+    <circle cx="540" cy="505" r="5" fill="#d9534f" opacity="0.8"/>
+  </g>
+</svg>
