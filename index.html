@@ -28,6 +28,112 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&amp;family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;family=Jost:wght@300;400;500;600&amp;family=Pinyon+Script&amp;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/index-DOGi93g2.css" />
+    <style>
+      /* ── Cover / Opening section layout overrides ── */
+
+      /*
+        Cover screen structure:
+          outer: fixed inset-0 z-40 flex flex-col items-center justify-between bg-cream
+            ├── text block (z-20, my-auto)  → centered vertically
+            └── photo wrapper (z-10, mt-auto, max-w-sm..xl) → couple photo, bottom
+        
+        Issues observed:
+          - Desktop: photo too large, text cramped
+          - Mobile: empty strip below photo, photo not flush with bottom
+        
+        Fixes:
+          - Photo wrapper: pin to bottom, stretch to fill remaining space
+          - Photo image: smaller on desktop, flush at bottom on mobile
+      */
+
+      /* ---- Photo wrapper: always flush to bottom ---- */
+      /* Target the motion div that wraps the couple image */
+      /* It has classes: relative z-10 w-full max-w-sm...xl mt-auto flex justify-center pointer-events-none pb-0 px-4 */
+      /* We use the img src to find the right element and then style its parent */
+      img[src*="couple-3"] {
+        display: block !important;
+        object-fit: contain !important;
+        object-position: bottom center !important;
+        vertical-align: bottom !important;
+      }
+
+      /* Mobile (default): photo fills width, sits at bottom */
+      img[src*="couple-3"] {
+        max-height: 38vh !important;
+        max-width: 100% !important;
+        width: 100% !important;
+      }
+
+      /* Make the photo wrapper grow to fill the rest of the screen below text,
+         pushing the image to the bottom. We target the direct parent of the img. */
+      img[src*="couple-3"] {
+        /* Ensure no space below image within its container */
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+      }
+
+      /* The photo wrapper div: make it expand to fill remaining space
+         and push the image to the bottom */
+      /* Selector: any flex container that directly contains couple-3 img */
+      /* CSS-only approach: use :has() to target the wrapper */
+      div:has(> img[src*="couple-3"]) {
+        flex: 1 1 auto !important;
+        display: flex !important;
+        align-items: flex-end !important;
+        justify-content: center !important;
+        width: 100% !important;
+        max-width: none !important;
+        padding: 0 !important;
+        margin-top: 0 !important;
+      }
+
+      /* Tablet (sm) */
+      @media (min-width: 640px) {
+        img[src*="couple-3"] {
+          max-height: 36vh !important;
+          max-width: 90% !important;
+          width: auto !important;
+        }
+      }
+
+      /* Desktop (md+): make photo noticeably smaller */
+      @media (min-width: 768px) {
+        img[src*="couple-3"] {
+          max-height: 34vh !important;
+          max-width: 48% !important;
+          width: auto !important;
+        }
+      }
+
+      /* Large desktop */
+      @media (min-width: 1024px) {
+        img[src*="couple-3"] {
+          max-height: 36vh !important;
+          max-width: 40% !important;
+        }
+      }
+
+      /* Extra-large desktop */
+      @media (min-width: 1280px) {
+        img[src*="couple-3"] {
+          max-height: 38vh !important;
+          max-width: 34% !important;
+        }
+      }
+
+      /* Text block: ensure it stays truly centered and has proper spacing */
+      /* Target the motion div containing the text (it's a sibling of the photo wrapper) */
+      div:has(+ div > img[src*="couple-3"]) {
+        flex: 1 1 auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin: 0 !important;
+        padding-top: 1rem !important;
+        padding-bottom: 0 !important;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
