@@ -4,13 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eldhos &amp; Anitta | Wedding Invitation</title>
-    <meta name="description" content="Join us in celebrating the marriage of Eldhos &amp; Anitta — Monday, 05 October 2026, 10:00 AM at St. George Bethlehem Jacobite Syrian Church, Vattully." />
     <meta name="theme-color" content="#7d9370" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Eldhos &amp; Anitta" />
     <meta property="og:url" content="https://eldhos-anitta.vercel.app/" />
     <meta property="og:title" content="Eldhos &amp; Anitta — Wedding Invitation" />
-    <meta property="og:description" content="Eldhos &amp; Anitta invite you to their wedding — Monday, 05 October 2026, 10:00 AM at St. George Bethlehem Jacobite Syrian Church." />
     <meta property="og:image" content="https://eldhos-anitta.vercel.app/assets/og-preview.jpg" />
     <meta property="og:image:secure_url" content="https://eldhos-anitta.vercel.app/assets/og-preview.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
@@ -21,7 +19,6 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://eldhos-anitta.vercel.app/" />
     <meta name="twitter:title" content="Eldhos &amp; Anitta — Wedding Invitation" />
-    <meta name="twitter:description" content="Eldhos &amp; Anitta invite you to their wedding — Monday, 05 October 2026, 10:00 AM at St. George Bethlehem Jacobite Syrian Church." />
     <meta name="twitter:image" content="https://eldhos-anitta.vercel.app/assets/og-preview.jpg" />
     <link rel="canonical" href="https://eldhos-anitta.vercel.app/" />
     <link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 0 100 100%22&gt;&lt;/svg&gt;" />
@@ -29,84 +26,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&amp;family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;family=Jost:wght@300;400;500;600&amp;family=Pinyon+Script&amp;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/index-DOGi93g2.css" />
     <style>
-      /* ── Opening Section Layout & Spacing Overrides ── */
-
-      /* Photo image: crisp bottom anchoring with natural shadow blend */
-      img[src*="couple-3"] {
-        display: block !important;
-        object-fit: contain !important;
-        object-position: bottom center !important;
-        vertical-align: bottom !important;
-        margin-bottom: 0 !important;
-        padding-bottom: 0 !important;
-        filter: drop-shadow(0 -4px 16px rgba(0, 0, 0, 0.04));
-      }
-
-      /* Mobile: photo fills width naturally, sits flush at bottom */
-      img[src*="couple-3"] {
-        max-height: 36vh !important;
-        max-width: 100% !important;
-        width: auto !important;
-      }
-
-      /* Photo wrapper div: expands to fill bottom space */
-      div:has(> img[src*="couple-3"]) {
-        flex: 1 1 auto !important;
-        display: flex !important;
-        align-items: flex-end !important;
-        justify-content: center !important;
-        width: 100% !important;
-        max-width: none !important;
-        padding: 0 !important;
-        margin-top: 0 !important;
-      }
-
-      /* Tablet (sm) */
-      @media (min-width: 640px) {
-        img[src*="couple-3"] {
-          max-height: 35vh !important;
-          max-width: 90% !important;
-          width: auto !important;
-        }
-      }
-
-      /* Desktop (md+) */
-      @media (min-width: 768px) {
-        img[src*="couple-3"] {
-          max-height: 34vh !important;
-          max-width: 520px !important;
-          width: auto !important;
-        }
-      }
-
-      /* Large desktop */
-      @media (min-width: 1024px) {
-        img[src*="couple-3"] {
-          max-height: 35vh !important;
-          max-width: 480px !important;
-        }
-      }
-
-      /* Extra-large desktop */
-      @media (min-width: 1280px) {
-        img[src*="couple-3"] {
-          max-height: 36vh !important;
-          max-width: 440px !important;
-        }
-      }
-
-      /* Text block: centered vertically with balanced, airy padding */
-      div:has(+ div > img[src*="couple-3"]) {
-        flex: 1 1 auto !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: center !important;
-        margin: 0 !important;
-        padding-top: 1.25rem !important;
-        padding-bottom: 0.5rem !important;
-        position: relative !important;
-        z-index: 20 !important;
+      /* ── Opening Section Layout & Spacing ── */
+      .font-script {
+        font-family: "Alex Brush", "Pinyon Script", cursive !important;
+        -webkit-font-smoothing: antialiased;
       }
 
       /* ── Open Invitation Button Styling ── */
