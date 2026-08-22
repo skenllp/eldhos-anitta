@@ -109,6 +109,43 @@
         z-index: 20 !important;
       }
 
+      /* ── Open Invitation Button Styling ── */
+      .open-invitation-btn {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        min-width: 230px !important;
+        padding: 0.95rem 2.75rem !important;
+        background: linear-gradient(135deg, #cfa85c 0%, #b89343 100%) !important;
+        color: #ffffff !important;
+        border-radius: 9999px !important;
+        font-family: var(--font-sans) !important;
+        font-size: 0.8rem !important;
+        font-weight: 500 !important;
+        letter-spacing: 0.22em !important;
+        text-transform: uppercase !important;
+        box-shadow: 0 10px 25px -4px rgba(184, 147, 67, 0.42) !important;
+        border: 1px solid rgba(255, 255, 255, 0.28) !important;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease !important;
+        cursor: pointer !important;
+      }
+      @media (min-width: 640px) {
+        .open-invitation-btn {
+          min-width: 260px !important;
+          padding: 1.1rem 3.25rem !important;
+          font-size: 0.875rem !important;
+          letter-spacing: 0.25em !important;
+        }
+      }
+      .open-invitation-btn:hover {
+        background: linear-gradient(135deg, #b89343 0%, #a58133 100%) !important;
+        box-shadow: 0 14px 30px -3px rgba(184, 147, 67, 0.52) !important;
+        transform: scale(1.03) !important;
+      }
+      .open-invitation-btn:active {
+        transform: scale(0.97) !important;
+      }
+
       /* ── Mark Your Calendar Card Styling ── */
       img[src*="calendar-card-final"] {
         display: block !important;
@@ -125,6 +162,19 @@
       }
 
       /* ── Chapter Cards Spacing & Typography ── */
+      .journey-chapters-list {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 2rem !important;
+        margin-top: 2rem !important;
+        margin-bottom: 2.5rem !important;
+      }
+      @media (min-width: 640px) {
+        .journey-chapters-list {
+          gap: 2.75rem !important;
+        }
+      }
+
       .chapter-card {
         background: linear-gradient(180deg, #ffffff 0%, #faf7f0 100%) !important;
         border: 1px solid rgba(212, 188, 124, 0.55) !important;
