@@ -131,6 +131,14 @@
         letter-spacing: 0.02em !important;
         -webkit-font-smoothing: antialiased;
       }
+      .hero-section h1 {
+        margin-top: 2.75rem !important;
+      }
+      @media (min-width: 640px) {
+        .hero-section h1 {
+          margin-top: 3.25rem !important;
+        }
+      }
 
       /* ── Chapter Cards Spacing & Typography ── */
       .journey-chapters-list {
@@ -185,7 +193,7 @@
         width: 100% !important;
         height: 100% !important;
         object-fit: cover !important;
-        object-position: center 68% !important;
+        object-position: center 25% !important;
         display: block !important;
         filter: contrast(1.02) saturate(1.03) !important;
       }
@@ -229,6 +237,41 @@
       }
       .youtube-play-btn {
         box-shadow: 0 8px 24px rgba(220, 38, 38, 0.45) !important;
+      }
+      .youtube-open-btn {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background: #ba934b !important;
+        background: linear-gradient(135deg, #cfa85c 0%, #ba934b 100%) !important;
+        color: #ffffff !important;
+        border-radius: 2px !important;
+        font-family: var(--font-sans) !important;
+        font-size: 0.78rem !important;
+        font-weight: 500 !important;
+        letter-spacing: 0.22em !important;
+        text-transform: uppercase !important;
+        box-shadow: 0 8px 22px -4px rgba(186, 147, 75, 0.45) !important;
+        border: 1px solid rgba(255, 255, 255, 0.25) !important;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease !important;
+        text-decoration: none !important;
+      }
+      @media (min-width: 640px) {
+        .youtube-open-btn {
+          font-size: 0.85rem !important;
+          letter-spacing: 0.25em !important;
+        }
+      }
+      .youtube-open-btn:hover {
+        background: linear-gradient(135deg, #b89343 0%, #a58133 100%) !important;
+        box-shadow: 0 12px 28px -3px rgba(186, 147, 75, 0.55) !important;
+        transform: scale(1.02) !important;
+      }
+      .youtube-open-btn:active {
+        transform: scale(0.98) !important;
+      }
+      .youtube-open-btn svg {
+        margin-right: 0.85rem !important;
       }
     </style>
   </head>
