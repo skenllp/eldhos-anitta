@@ -118,7 +118,8 @@
       }
 
       /* ── Mark Your Calendar Card Styling ── */
-      img[src*="calendar-card-final"] {
+      img[src*="calendar-card-final"],
+      img[src*="calendar-card-engagement"] {
         display: block !important;
         width: 100% !important;
         height: auto !important;
@@ -130,6 +131,14 @@
         font-family: "Alex Brush", "Pinyon Script", cursive !important;
         letter-spacing: 0.02em !important;
         -webkit-font-smoothing: antialiased;
+      }
+      header h1 {
+        margin-top: 1.75rem !important;
+      }
+      @media (min-width: 640px) {
+        header h1 {
+          margin-top: 2.25rem !important;
+        }
       }
 
       /* ── Chapter Cards Spacing & Typography ── */
