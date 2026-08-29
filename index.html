@@ -282,6 +282,58 @@
         color: #ffffff !important;
         stroke: #ffffff !important;
       }
+
+      /* ── Blessing Toggle Group & Button Styling ── */
+      .blessing-toggle-group {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 0.5rem !important;
+        margin-bottom: 0.75rem !important;
+        margin-top: 0.25rem !important;
+        width: 100% !important;
+      }
+      .blessing-toggle-btn {
+        flex: 1 !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 0.35rem !important;
+        padding: 0.5rem 0.75rem !important;
+        font-family: var(--font-sans) !important;
+        font-size: 0.72rem !important;
+        font-weight: 500 !important;
+        letter-spacing: 0.08em !important;
+        text-transform: uppercase !important;
+        border-radius: 9999px !important;
+        border: 1px solid #dfd4be !important;
+        background-color: #faf7f0 !important;
+        color: #7d632a !important;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03) !important;
+        transition: all 0.2s ease !important;
+        cursor: pointer !important;
+        white-space: nowrap !important;
+        line-height: 1.2 !important;
+      }
+      @media (min-width: 400px) {
+        .blessing-toggle-btn {
+          font-size: 0.75rem !important;
+          padding: 0.55rem 1rem !important;
+          gap: 0.45rem !important;
+        }
+      }
+      .blessing-toggle-btn:hover {
+        border-color: #c5a557 !important;
+        color: #5c4516 !important;
+        background-color: #f7f0e1 !important;
+      }
+      .blessing-toggle-btn.active {
+        background: linear-gradient(135deg, #cfa85c 0%, #ba934b 100%) !important;
+        color: #ffffff !important;
+        border-color: #ba934b !important;
+        font-weight: 600 !important;
+        box-shadow: 0 3px 10px rgba(186, 147, 75, 0.35) !important;
+      }
     </style>
   </head>
   <body>
