@@ -26,54 +26,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&amp;family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;family=Jost:wght@300;400;500;600&amp;family=Pinyon+Script&amp;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/index-DOGi93g2.css" />
     <style>
-      /* ── Floral Background Setup ── */
-      body {
-        background-color: #fefdfb !important;
-        position: relative !important;
-        min-height: 100vh !important;
-      }
-
-      body::before {
-        content: "" !important;
-        position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
-        right: 0 !important;
-        bottom: 0 !important;
-        width: 100vw !important;
-        height: 100vh !important;
-        height: 100dvh !important;
-        background-image: url('./assets/floral-bg.png') !important;
-        background-size: cover !important;
-        background-position: center center !important;
-        background-repeat: no-repeat !important;
-        z-index: -1 !important;
-        pointer-events: none !important;
-      }
-
-      @media (min-width: 768px) {
-        body::before {
-          background-size: contain !important;
-          background-position: center center !important;
-          background-repeat: no-repeat !important;
-        }
-      }
-
-      .cover-screen-bg {
-        background-color: #fefdfb !important;
-        background-image: url('./assets/floral-bg.png') !important;
-        background-size: cover !important;
-        background-position: center center !important;
-        background-repeat: no-repeat !important;
-      }
-
-      @media (min-width: 768px) {
-        .cover-screen-bg {
-          background-size: contain !important;
-          background-position: center center !important;
-        }
-      }
-
       /* ── Opening Section Layout & Spacing ── */
       .cover-card-container {
         display: flex !important;
@@ -331,36 +283,56 @@
         stroke: #ffffff !important;
       }
 
-      /* ── Custom Wish Button Styling ── */
-      .custom-wish-btn {
+      /* ── Blessing Toggle Group & Button Styling ── */
+      .blessing-toggle-group {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 0.5rem !important;
+        margin-bottom: 0.75rem !important;
+        margin-top: 0.25rem !important;
+        width: 100% !important;
+      }
+      .blessing-toggle-btn {
+        flex: 1 !important;
         display: inline-flex !important;
         align-items: center !important;
         justify-content: center !important;
-        gap: 0.45rem !important;
-        padding: 0.5rem 1.6rem !important;
-        border-radius: 9999px !important;
-        border: 1px solid rgba(212, 188, 124, 0.75) !important;
-        background-color: rgba(254, 252, 246, 0.95) !important;
-        color: #7d632a !important;
+        gap: 0.35rem !important;
+        padding: 0.5rem 0.75rem !important;
         font-family: var(--font-sans) !important;
-        font-size: 0.75rem !important;
+        font-size: 0.72rem !important;
         font-weight: 500 !important;
-        letter-spacing: 0.15em !important;
+        letter-spacing: 0.08em !important;
         text-transform: uppercase !important;
-        white-space: nowrap !important;
-        text-decoration: none !important;
-        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04) !important;
+        border-radius: 9999px !important;
+        border: 1px solid #dfd4be !important;
+        background-color: #faf7f0 !important;
+        color: #7d632a !important;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03) !important;
         transition: all 0.2s ease !important;
         cursor: pointer !important;
+        white-space: nowrap !important;
         line-height: 1.2 !important;
-        margin: 0 auto !important;
       }
-      .custom-wish-btn:hover {
-        background-color: #ba934b !important;
-        border-color: #ba934b !important;
+      @media (min-width: 400px) {
+        .blessing-toggle-btn {
+          font-size: 0.75rem !important;
+          padding: 0.55rem 1rem !important;
+          gap: 0.45rem !important;
+        }
+      }
+      .blessing-toggle-btn:hover {
+        border-color: #c5a557 !important;
+        color: #5c4516 !important;
+        background-color: #f7f0e1 !important;
+      }
+      .blessing-toggle-btn.active {
+        background: linear-gradient(135deg, #cfa85c 0%, #ba934b 100%) !important;
         color: #ffffff !important;
-        box-shadow: 0 4px 12px rgba(186, 147, 75, 0.25) !important;
-        transform: translateY(-1px) !important;
+        border-color: #ba934b !important;
+        font-weight: 600 !important;
+        box-shadow: 0 3px 10px rgba(186, 147, 75, 0.35) !important;
       }
     </style>
   </head>
