@@ -25,7 +25,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&amp;family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;family=Jost:wght@300;400;500;600&amp;family=Pinyon+Script&amp;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/index-DOGi93g2.css" />
+    <link rel="preload" as="image" href="./assets/calendar-card-final.png" />
+    <link rel="preload" as="image" href="./assets/envelope.png" />
     <style>
+      /* ── Save the Date Slot Stability ── */
+      .save-the-date-slot {
+        min-height: 480px !important;
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        position: relative !important;
+      }
+      @media (min-width: 640px) {
+        .save-the-date-slot {
+          min-height: 540px !important;
+        }
+      }
+
       /* ── Opening Section Layout & Spacing ── */
       .cover-card-container {
         display: flex !important;
